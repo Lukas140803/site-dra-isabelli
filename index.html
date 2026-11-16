@@ -63,7 +63,7 @@ h2{font-size:clamp(2.4rem,5.6vw,4.6rem)}
 .cursor-ring.active{width:86px;height:86px;background:var(--blue);border-color:var(--blue)}
 .cursor-ring span{opacity:0;transition:opacity .3s}
 .cursor-ring.active span{opacity:1}
-@media (pointer:fine){.cursor,.cursor-ring{display:flex}body{cursor:none}a,button,input{cursor:none}}
+
 
 /* ---------- HEADER ---------- */
 header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .5s,backdrop-filter .5s,box-shadow .5s}
@@ -287,8 +287,6 @@ footer a:hover{color:#fff}
   <div class="loader-line"><i></i></div>
 </div>
 
-<div class="cursor"></div>
-<div class="cursor-ring"><span>ver</span></div>
 
 <!-- HEADER -->
 <header id="top">
@@ -677,16 +675,8 @@ footer a:hover{color:#fff}
   /* ---- CTA anéis ---- */
   gsap.to('.cta .ring',{rotate:30,scale:1.1,ease:'none',scrollTrigger:{trigger:'.cta',start:'top bottom',end:'bottom top',scrub:true}});
 
-  /* ---- Cursor + botões magnéticos (desktop) ---- */
+  /* ---- Botões magnéticos (desktop) ---- */
   if (fine) {
-    const dot = document.querySelector('.cursor'), ring = document.querySelector('.cursor-ring'), label = ring.querySelector('span');
-    const dx = gsap.quickTo(dot,'x',{duration:.15}), dy = gsap.quickTo(dot,'y',{duration:.15});
-    const rx = gsap.quickTo(ring,'x',{duration:.5,ease:'power3'}), ry = gsap.quickTo(ring,'y',{duration:.5,ease:'power3'});
-    window.addEventListener('mousemove',e=>{dx(e.clientX);dy(e.clientY);rx(e.clientX);ry(e.clientY);});
-    document.querySelectorAll('[data-cursor]').forEach(el=>{
-      el.addEventListener('mouseenter',()=>{label.textContent=el.dataset.cursor;ring.classList.add('active');gsap.to(dot,{scale:0,duration:.3});});
-      el.addEventListener('mouseleave',()=>{ring.classList.remove('active');gsap.to(dot,{scale:1,duration:.3});});
-    });
     document.querySelectorAll('.magnetic').forEach(el=>{
       el.addEventListener('mousemove',e=>{const r=el.getBoundingClientRect();gsap.to(el,{x:(e.clientX-r.left-r.width/2)*.3,y:(e.clientY-r.top-r.height/2)*.4,duration:.6,ease:'power3.out'});});
       el.addEventListener('mouseleave',()=>gsap.to(el,{x:0,y:0,duration:.9,ease:'elastic.out(1,.4)'}));
