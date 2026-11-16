@@ -6,7 +6,6 @@
 <title>Dra. Isabelli Maitan | Cirurgiã-Dentista</title>
 <meta name="description" content="Dra. Isabelli Maitan, Cirurgiã-Dentista (CROSP 178416). Clínica geral e estética dental em Santa Cruz do Rio Pardo. Agende sua avaliação pelo WhatsApp.">
 <meta property="og:title" content="Dra. Isabelli Maitan | Cirurgiã-Dentista">
-<meta property="og:image" content="dra-isabelli.jpg">
 <meta property="og:description" content="Sorrisos desenhados com precisão e cuidado. Agende sua avaliação.">
 <link rel="icon" type="image/png" href="emblema.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -125,7 +124,7 @@ header.scrolled{background:rgba(255,255,255,.72);backdrop-filter:blur(14px);-web
 .photo-slot{position:absolute;inset:0;background:linear-gradient(160deg,#DCEAF8 0%,#BFD7F0 55%,#9CC2EA 100%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;color:rgba(15,47,92,.55);text-align:center;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;padding-bottom:9%}
 .photo-slot svg{position:absolute;bottom:0;width:72%;opacity:.42}
 .photo-slot span{position:relative;background:rgba(255,255,255,.75);padding:.45rem .9rem;border-radius:100px}
-.media img,.arch img,.j-img img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.media img,.arch img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
 
 /* ---------- MARQUEE ---------- */
 .marquee{border-block:1px solid var(--line);padding:1.6rem 0;overflow:hidden;background:var(--white)}
@@ -175,27 +174,24 @@ blockquote{font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,2.2rem);line-he
 .card:hover p{max-height:140px;opacity:1}
 @media(max-width:1100px){.cards{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:1rem;scrollbar-width:none}.cards::-webkit-scrollbar{display:none}.card{scroll-snap-align:start;min-height:300px}.card p{max-height:none;opacity:1}}
 
-/* JORNADA (pinned) */
+/* JORNADA (lado a lado, sem travar a rolagem) */
 .journey{background:var(--navy);color:#fff;overflow:hidden}
 .journey .eyebrow{color:#9CCBF2}
 .journey .eyebrow::before{background:#9CCBF2}
-.j-grid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:center;min-height:100vh;padding:100px 0}
-.j-steps{position:relative;height:clamp(320px,42vh,420px)}
-.j-step{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center}
-.j-step .n{font-family:var(--serif);font-size:1rem;color:#9CCBF2;margin-bottom:1rem}
-.j-step h3{font-size:clamp(3rem,6.4vw,5.6rem);margin-bottom:1.4rem;background:linear-gradient(180deg,#fff 30%,#9CCBF2);-webkit-background-clip:text;background-clip:text;color:transparent}
-.j-step p{color:rgba(255,255,255,.72);max-width:28rem}
-.j-visual{position:relative;aspect-ratio:4/5;border-radius:999px 999px 30px 30px;overflow:hidden}
-.j-img{position:absolute;inset:0}
-.j-img .photo-slot{background:linear-gradient(160deg,#2A6CB8,#163F78)}
-.j-img:nth-child(2) .photo-slot{background:linear-gradient(160deg,#3D9BE0,#1C5AA6)}
-.j-img:nth-child(3) .photo-slot{background:linear-gradient(160deg,#9CCBF2,#3D9BE0)}
-.j-img .photo-slot{color:rgba(255,255,255,.8)}
-.j-img .photo-slot span{background:rgba(255,255,255,.14)}
-.j-progress{display:flex;gap:.6rem;margin-top:2.4rem}
-.j-progress i{height:2px;flex:1;max-width:70px;background:rgba(255,255,255,.2);position:relative;overflow:hidden}
-.j-progress i b{position:absolute;inset:0;background:#9CCBF2;transform:scaleX(0);transform-origin:left}
-@media(max-width:900px){.j-grid{grid-template-columns:1fr;min-height:auto;gap:3rem}.j-steps{height:auto}.j-step{position:relative;margin-bottom:3rem}.j-visual{max-width:360px;order:-1}.j-progress{display:none}}
+.j-top{display:grid;grid-template-columns:1.2fr .8fr;gap:6vw;align-items:end;margin-bottom:5rem}
+.j-top h2{margin:1.4rem 0 1.4rem;background:linear-gradient(180deg,#fff 30%,#9CCBF2);-webkit-background-clip:text;background-clip:text;color:transparent}
+.j-top h2 .w>span{background:linear-gradient(180deg,#fff 30%,#9CCBF2);-webkit-background-clip:text;background-clip:text;color:transparent}
+.j-top p{color:rgba(255,255,255,.72);max-width:30rem}
+.j-photo{position:relative;aspect-ratio:4/5;max-width:360px;justify-self:end;width:100%;border-radius:999px 999px 26px 26px;overflow:hidden}
+.j-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.j-row{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:2.4rem}
+.j-line{position:absolute;left:0;right:0;top:22px;height:1px;background:rgba(255,255,255,.15)}
+.j-line i{position:absolute;inset:0;background:linear-gradient(90deg,#9CCBF2,#3D9BE0);transform:scaleX(0);transform-origin:left}
+.j-step{position:relative;padding-top:0}
+.j-step .dot{width:44px;height:44px;border-radius:50%;border:1px solid rgba(156,203,242,.5);background:var(--navy);display:grid;place-items:center;font-family:var(--serif);color:#9CCBF2;font-size:.95rem;position:relative;z-index:1;margin-bottom:1.8rem}
+.j-step h3{font-size:clamp(2rem,3.4vw,2.9rem);margin-bottom:1rem;color:#fff}
+.j-step p{color:rgba(255,255,255,.7);font-size:.95rem;max-width:22rem}
+@media(max-width:900px){.j-top{grid-template-columns:1fr;margin-bottom:3rem}.j-photo{justify-self:start;max-width:300px}.j-row{grid-template-columns:1fr;gap:2.6rem}.j-line{left:22px;right:auto;top:0;bottom:0;width:1px;height:auto}.j-line i{transform:scaleY(0);transform-origin:top}.j-step{padding-left:70px}.j-step .dot{position:absolute;left:0;top:0;margin:0}}
 
 /* ANTES E DEPOIS */
 .ba-wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
@@ -405,22 +401,22 @@ footer a:hover{color:#fff}
   </div>
 </section>
 
-<!-- JORNADA (scroll pinado) -->
-<section class="journey" id="jornada">
-  <div class="wrap j-grid">
-    <div>
-      <span class="eyebrow">A jornada do seu sorriso</span>
-      <div class="j-steps" style="margin-top:1.6rem">
-        <div class="j-step"><span class="n">01 /</span><h3>Escuta</h3><p>Tudo começa com uma conversa. Entendo suas expectativas, sua rotina e o que você gostaria de mudar no seu sorriso.</p></div>
-        <div class="j-step"><span class="n">02 /</span><h3>Planejamento</h3><p>Avaliação detalhada e plano de tratamento individual, para que você saiba exatamente cada etapa antes de começar.</p></div>
-        <div class="j-step"><span class="n">03 /</span><h3>Resultado</h3><p>Um sorriso saudável, natural e que combina com você, com acompanhamento depois do tratamento.</p></div>
+<!-- JORNADA -->
+<section class="journey pad" id="jornada">
+  <div class="wrap">
+    <div class="j-top">
+      <div>
+        <span class="eyebrow">A jornada do seu sorriso</span>
+        <h2 class="split">Do primeiro contato ao resultado.</h2>
+        <p class="fade-up">Cada tratamento segue três etapas, para que você saiba exatamente o que vai acontecer em cada momento.</p>
       </div>
-      <div class="j-progress"><i><b></b></i><i><b></b></i><i><b></b></i></div>
+      <div class="j-photo reveal-img"><img src="atendendo-2.jpg" alt="Dra. Isabelli em atendimento no consultório" loading="lazy"></div>
     </div>
-    <div class="j-visual">
-      <div class="j-img"><div class="photo-slot"><span>Foto 4: conversa com paciente</span></div></div>
-      <div class="j-img"><div class="photo-slot"><span>Foto 5: planejamento</span></div></div>
-      <div class="j-img"><img src="atendendo-2.jpg" alt="Dra. Isabelli em atendimento no consultório" loading="lazy"></div>
+    <div class="j-row">
+      <div class="j-line"><i></i></div>
+      <div class="j-step"><span class="dot">01</span><h3>Escuta</h3><p>Tudo começa com uma conversa. Entendo suas expectativas, sua rotina e o que você gostaria de mudar no seu sorriso.</p></div>
+      <div class="j-step"><span class="dot">02</span><h3>Planejamento</h3><p>Avaliação detalhada e plano de tratamento individual, para que você saiba exatamente cada etapa antes de começar.</p></div>
+      <div class="j-step"><span class="dot">03</span><h3>Resultado</h3><p>Um sorriso saudável, natural e que combina com você, com acompanhamento depois do tratamento.</p></div>
     </div>
   </div>
 </section>
@@ -671,25 +667,12 @@ footer a:hover{color:#fff}
        .to('.sig-full',{opacity:1,duration:.4},'<');
   ScrollTrigger.create({trigger:'.signature',start:'top 88%',once:true,onEnter:()=>sigTl.play()});
 
-  /* ---- Jornada pinada (desktop) ---- */
-  ScrollTrigger.matchMedia({
-    '(min-width: 901px)': function(){
-      const steps = gsap.utils.toArray('.j-step'), imgs = gsap.utils.toArray('.j-img'), bars = gsap.utils.toArray('.j-progress b');
-      gsap.set(steps.slice(1),{autoAlpha:0,y:60});
-      gsap.set(imgs.slice(1),{clipPath:'inset(100% 0 0 0)'});
-      const tl = gsap.timeline({scrollTrigger:{trigger:'.journey',start:'top top',end:'+=220%',pin:true,scrub:1}});
-      tl.to(bars[0],{scaleX:1,duration:1});
-      for(let i=1;i<steps.length;i++){
-        tl.to(steps[i-1],{autoAlpha:0,y:-60,duration:.6})
-          .to(steps[i],{autoAlpha:1,y:0,duration:.6},'<.3')
-          .to(imgs[i],{clipPath:'inset(0% 0 0 0)',duration:.9,ease:'none'},'<-.3')
-          .to(bars[i],{scaleX:1,duration:1});
-      }
-    },
-    '(max-width: 900px)': function(){
-      gsap.utils.toArray('.j-step').forEach(s=>gsap.from(s,{y:40,opacity:0,duration:1,ease:'expo.out',scrollTrigger:{trigger:s,start:'top 85%'}}));
-    }
-  });
+  /* ---- Jornada: etapas lado a lado, sem travar a rolagem ---- */
+  const jVertical = window.matchMedia('(max-width: 900px)').matches;
+  const jTl = gsap.timeline({scrollTrigger:{trigger:'.j-row',start:'top 80%'}});
+  jTl.to('.j-line i',{scaleX:jVertical?1:1,scaleY:1,duration:1.6,ease:'power2.inOut'})
+     .from('.j-step',{y:40,opacity:0,duration:1,ease:'expo.out',stagger:.25},0.1)
+     .from('.j-step .dot',{scale:.4,duration:.8,ease:'back.out(2)',stagger:.25},0.1);
 
   /* ---- CTA anéis ---- */
   gsap.to('.cta .ring',{rotate:30,scale:1.1,ease:'none',scrollTrigger:{trigger:'.cta',start:'top bottom',end:'bottom top',scrub:true}});
