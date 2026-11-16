@@ -101,13 +101,13 @@ header.scrolled{background:rgba(255,255,255,.72);backdrop-filter:blur(14px);-web
 .hero{min-height:100svh;position:relative;display:flex;align-items:center;padding:120px 0 80px;background:radial-gradient(55% 65% at 76% 45%,rgba(61,155,224,.38) 0%,rgba(61,155,224,0) 70%),linear-gradient(160deg,#F2F8FE 0%,#D9EAFA 50%,#B4D4F2 100%);overflow:hidden}
 .hero .orbit{border-color:rgba(28,90,166,.3)}
 .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:5vw;align-items:center}
-.hero h1{font-size:clamp(3.2rem,8.6vw,7.6rem);margin:1.6rem 0 1.4rem}
+.hero h1{font-size:clamp(2.5rem,5vw,4.8rem);margin:1.4rem 0 1.2rem;max-width:12ch}
 .hero h1 em{font-style:italic;font-weight:400}
 .hero p.lead{max-width:30rem;color:var(--muted);font-size:1.05rem}
 .hero-cta{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2.4rem}
 .hero-meta{display:flex;gap:2.4rem;margin-top:3.4rem;padding-top:1.6rem;border-top:1px solid var(--line);font-size:.78rem;color:var(--muted);letter-spacing:.08em}
 .hero-meta b{display:block;font-family:var(--serif);font-size:1.15rem;color:var(--navy);font-weight:500;letter-spacing:0}
-.hero-photo{position:relative;justify-self:end;width:100%;max-width:470px}
+.hero-photo{position:relative;justify-self:end;width:100%;max-width:420px}
 .arch{border-radius:999px 999px 28px 28px;overflow:hidden;aspect-ratio:3/4;position:relative}
 #heroImg{top:0!important;height:112%!important}
 .hero-photo .orbit{position:absolute;inset:-28px;border:1px solid var(--line);border-radius:999px 999px 40px 40px;pointer-events:none}
@@ -117,7 +117,7 @@ header.scrolled{background:rgba(255,255,255,.72);backdrop-filter:blur(14px);-web
 .scroll-ind span{width:1px;height:46px;background:var(--line);position:relative;overflow:hidden}
 .scroll-ind span::after{content:"";position:absolute;left:0;top:-50%;width:1px;height:50%;background:var(--blue);animation:drop 2s var(--ease) infinite}
 @keyframes drop{to{top:110%}}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-photo{justify-self:center;max-width:340px;order:-1;margin-top:1rem}.hero-badge{left:-14px}.hero-meta{gap:1.4rem;flex-wrap:wrap}.scroll-ind{display:none}}
+@media(max-width:900px){.hero{padding-top:104px}.hero-grid{grid-template-columns:1fr}.hero-photo{justify-self:center;max-width:270px;order:-1;margin-top:.6rem}.hero-photo .orbit{inset:-14px}.hero .eyebrow{letter-spacing:.2em;font-size:.66rem}.hero-badge{bottom:6%}.hero-badge{left:-14px}.hero-meta{gap:1.4rem;flex-wrap:wrap}.scroll-ind{display:none}}
 
 /* ---------- PHOTO SLOTS ---------- */
 /* Para trocar: substitua a <div class="photo-slot"> por <img src="foto.jpg" alt="..."> mantendo o container */
